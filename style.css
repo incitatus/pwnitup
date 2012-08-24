@@ -1,0 +1,172 @@
+/* Clear all tag styles */
+html, body {
+  height: 100%;
+}
+
+body,
+h1, h2, h3,
+p, ul, li,
+form {
+	border: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Set default text font, size, and color */
+body,
+form, input {
+	color: #000000;
+	font-family: Arial, Helvitica, Sans-serif;
+	font-size: 81.5%;
+}
+
+/* Set header sizes */
+h1 { font-size: 200%; }
+h2 { font-size: 150%; }
+h3 { font-size: 115%; }
+
+
+/* Animation for header */
+@-webkit-keyframes pulse {
+ from {
+   opacity: 0.0;
+   font-size: 100%;
+ }
+ to {
+   opacity: 1.0;
+   font-size: 200%;
+ }
+}
+
+#mainHeaderCasing {
+	height: 50px;
+	text-align: center;
+	width: 100%;
+}
+
+/* Main Header */
+#mainHeader {
+	font-size: 150%;
+	text-align: center;
+	text-shadow: 0px 9px 20px #000;
+	width: 100%;
+	margin: 5px;
+	-webkit-animation-name: pulse;
+  	-webkit-animation-duration: 2s;
+  	-webkit-animation-iteration-count: infinite;
+  	-webkit-animation-timing-function: ease-in-out;
+  	-webkit-animation-direction: alternate;
+}
+
+/* NavBar Div enclosure */
+#navBarDiv {
+	text-align: center;
+	width: 100%;
+}
+
+/* NavBar */
+#navBar {
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	background-color: #DDDDDD;
+	display: inline-block;
+	height: 30px;
+	list-style: none;
+	text-align: center;
+	width: 85%;
+}
+
+#navBar:hover {
+	cursor: pointer;
+}
+
+#navBar li {
+	display: inline-block;
+	font-size: 125%;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.selectedNavItem {
+	background-color: #FFFFFF;
+}
+
+/* Main Content (wrapper div for all three columns) */
+#mainContent {
+	display: inline-block;
+	font-size: 110%;
+	position: relative;
+	width: 100%;
+  overflow: auto;
+}
+
+/* Left and Right Column common elements */
+#leftCol, #rightCol, #middleCol {
+	display: inline-block;
+	float: left;
+	min-height: 800px;
+	margin-bottom: 20px;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-top: 10px;
+	width: 10%;
+}
+
+/* Left Column */
+#leftCol {
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	background-color: #FF3333;
+}
+
+/* Right Column */
+#rightCol {
+	border-radius: 15px;
+	-moz-border-radius: 15px;
+	background-color: #6666FF;
+}
+
+/* Middle Column */
+#middleCol {
+  height: auto;
+	margin-left: 0%;
+	margin-right: 0%;
+  overflow: auto;
+	padding: .5%;
+	width: 71%;
+}
+
+.date {
+	font-weight: bold;
+}
+
+.entry {
+  margin-bottom: 20px;
+}
+
+.video {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.caption {
+	font-size: 95%;
+}
+
+code {
+  white-space: pre-wrap;
+  width: 50%;
+}
+
+meter {
+	float: right;
+	width: 20%;
+}
+
+.projectTitle {
+	font-size: 110%;
+	font-weight: bold;
+}
