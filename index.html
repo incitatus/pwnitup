@@ -17,16 +17,16 @@
     </div>
     <div id="navBarDiv">
       <ul id="navBar">
-        <li id="homeNavItem" class="selectedNavItem" onclick="navItemClicked('homeNavItem','homeContent')">
+        <li id="homeNavItem" class="selectedNavItem navItem">
           Home
         </li>
-        <li id="blogNavItem" onclick="navItemClicked('blogNavItem', 'blogContent')">
+        <li id="blogNavItem" class="navItem">
           Blog
         </li>
-        <li id="projectNavItem" onclick="navItemClicked('projectNavItem', 'projectContent')">
+        <li id="projectNavItem" class="navItem">
           Projects
         </li>
-        <li id="videoNavItem" onclick="navItemClicked('videoNavItem', 'videoContent')">
+        <li id="videoNavItem" class="navItem">
           Videos
         </li>
       </ul>
@@ -34,12 +34,12 @@
     <div id="mainContent">
       <div id="leftCol"></div>
       <div id="middleCol">
-        <div id="homeContent">
+        <div id="homeContent" class="content">
           <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Welcome to Kyle's awesome website.  This is mostly intended for friends and family to discover what I've been up to: projects, interests, and of course random, disparate thoughts.  I use the word 'discover' because I'm not actually going to tell anyone about this site.  I've started an AdWords campaign using all of my friends' and family members' names as keywords.  If you came here, then I succeeded in getting your attention. You're as narcissistic as me!  Pwn it up!</p>
           <br/>
           <p>Also, this website is best viewed in Chrome.  It's unfortunately the only browser that supports all the HTML5 features that I want on my site.</p>
         </div>
-        <div id="blogContent" style="display:none;">
+        <div id="blogContent" class="content">
           <div class="date">Oct 30, 2010</div>
           <div class="entry">Well, here's my first entry.  This site is going to be pretty rudimentary at first, but as things ramp up, I'll start adding more features (and content worth reading).  Sorry for such a lame first post.</div>
           <div class="date">Feb 20, 2012</div>
@@ -115,7 +115,7 @@
             </code>
           </div>
         </div>
-        <div id="projectContent" style="display:none;">
+        <div id="projectContent" class="content">
           <div class="projectTitle">
             Coffee Table
             <meter min="0" max="100" low="25" high="75" value="100" optimum="100">100%</meter>
@@ -147,7 +147,7 @@
           <div class="projectBody">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I wanted to try out some android development, so I'm going to write a small little app that shuffles a deck and returns cards when you press a button.</div>
         </div>
-        <div id="videoContent" style="display:none;">
+        <div id="videoContent" class="content">
           <p>Until I get a video camera, sweet videos that I find on Youtube will have to suffice for this section.</p>
           <br/>
           <div class="video">
@@ -166,5 +166,8 @@
       </div>
       <div id="rightCol"></div>
     </div>
+    <script type="text/javascript">
+      initialize();
+    </script>
   </body>
 </html>
