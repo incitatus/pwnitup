@@ -39,9 +39,14 @@ h3 { font-size: 115%; }
 }
 
 #mainHeaderCasing {
-	height: 50px;
-	text-align: center;
-	width: 100%;
+	background: white;
+  height: 50px;
+	left: 0;
+  position: fixed;
+  text-align: center;
+	top: 0;
+  width: 100%;
+  z-index: 3;
 }
 
 /* Main Header */
@@ -52,16 +57,22 @@ h3 { font-size: 115%; }
 	width: 100%;
 	margin: 5px;
 	-webkit-animation-name: pulse;
-  	-webkit-animation-duration: 2s;
-  	-webkit-animation-iteration-count: infinite;
-  	-webkit-animation-timing-function: ease-in-out;
-  	-webkit-animation-direction: alternate;
+ 	-webkit-animation-duration: 2s;
+ 	-webkit-animation-iteration-count: infinite;
+ 	-webkit-animation-timing-function: ease-in-out;
+ 	-webkit-animation-direction: alternate;
 }
 
 /* NavBar Div enclosure */
 #navBarDiv {
 	text-align: center;
 	width: 100%;
+  position: fixed;
+  left: 0;
+  top: 50px;
+  background: white;
+  z-index: 1;
+  padding-bottom: 10px;
 }
 
 /* NavBar */
@@ -95,10 +106,13 @@ h3 { font-size: 115%; }
 }
 
 /* Main Content (wrapper div for all three columns) */
-#mainContent {
-	display: inline-block;
+.contentContainer {
+	box-orient: horizontal;
+  display: box;
 	font-size: 110%;
-	position: relative;
+	position: absolute;
+  top: 80px;
+  left: 0;
 	width: 100%;
   overflow: auto;
 }
@@ -106,37 +120,46 @@ h3 { font-size: 115%; }
 /* Left and Right Column common elements */
 #leftCol, #rightCol, #middleCol {
 	display: inline-block;
-	float: left;
-	min-height: 800px;
 	margin-bottom: 20px;
 	margin-left: 2%;
 	margin-right: 2%;
 	margin-top: 10px;
 	width: 10%;
+  padding-bottom: 60px;
+  min-height: 800px;
 }
 
 /* Left Column */
 #leftCol {
-	border-radius: 15px;
+	position: fixed;
+  top: 80px;
+  left: 0;
+  border-radius: 15px;
 	-moz-border-radius: 15px;
 	background-color: #FF3333;
+  z-index: 1;
 }
 
 /* Right Column */
 #rightCol {
-	border-radius: 15px;
+	position: fixed;
+  top: 80px;
+  right: 0;
+  border-radius: 15px;
 	-moz-border-radius: 15px;
 	background-color: #6666FF;
+  z-index: 1;
 }
 
 /* Middle Column */
 #middleCol {
   height: auto;
-	margin-left: 0%;
-	margin-right: 0%;
-  overflow: auto;
+	margin-left: 14%;
+	margin-right: 14%;
+  position: relative;
+  overflow: hidden;
 	padding: .5%;
-	width: 71%;
+	width: 70%;
 }
 
 .date {
@@ -169,4 +192,15 @@ meter {
 .projectTitle {
 	font-size: 110%;
 	font-weight: bold;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 14%;
+  width: 70%;
+  background-color: white;
+  height: 15px;
+  z-index: 1;
+  padding-top: 10px;
 }
