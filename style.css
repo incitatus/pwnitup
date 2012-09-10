@@ -25,6 +25,12 @@ h1 { font-size: 200%; }
 h2 { font-size: 150%; }
 h3 { font-size: 115%; }
 
+ul {
+  margin-left: 2em;
+}
+ul li {
+  list-style: disc outside;
+}
 
 /* Animation for header */
 @-webkit-keyframes pulse {
@@ -83,7 +89,8 @@ h3 { font-size: 115%; }
 	display: inline-block;
 	height: 30px;
 	list-style: none;
-	text-align: center;
+	margin-left: 0px;
+  text-align: center;
 	width: 85%;
 }
 
@@ -162,6 +169,10 @@ h3 { font-size: 115%; }
 	width: 70%;
 }
 
+.beer {
+  font-weight: bold;
+  font-style: oblique;
+}
 .date {
 	font-weight: bold;
 }
